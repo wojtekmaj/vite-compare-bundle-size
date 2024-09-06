@@ -1,14 +1,11 @@
-import type {StatsCompilation} from 'webpack'
-import {assetNameToSizeMap} from './name-to-size-map'
-import type {WebpackStatsDiff} from './types'
-import {webpackStatsDiff} from './webpack-stats-diff'
+import { assetNameToSizeMap } from './name-to-size-map.js';
+import { viteStatsDiff } from './vite-stats-diff.js';
+
+import type { ViteStatsDiff, StatsAsset } from './types.js';
 
 export function getStatsDiff(
-  oldAssetStats: Pick<StatsCompilation, 'assets'>,
-  newAssetStats: Pick<StatsCompilation, 'assets'>
-): WebpackStatsDiff {
-  return webpackStatsDiff(
-    assetNameToSizeMap(oldAssetStats.assets),
-    assetNameToSizeMap(newAssetStats.assets)
-  )
+  oldStatsAssets: StatsAsset[],
+  newStatsAssets: StatsAsset[],
+): ViteStatsDiff {
+  return viteStatsDiff(assetNameToSizeMap(oldStatsAssets), assetNameToSizeMap(newStatsAssets));
 }

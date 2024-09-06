@@ -1,19 +1,20 @@
-import {createReadStream} from 'fs'
-import {resolve} from 'path'
-import {parseChunked} from '@discoveryjs/json-ext'
-import type {StatsCompilation} from 'webpack'
-import * as core from '@actions/core'
+import { createReadStream } from 'node:fs';
+import { resolve } from 'node:path';
 
-export async function parseStatsFileToJson(
-  statsFilePath: string
-): Promise<Pick<StatsCompilation, 'assets' | 'chunks'>> {
+import * as core from '@actions/core';
+import { parseChunked } from '@discoveryjs/json-ext';
+
+import type { StatsAsset } from './types.js';
+
+export async function parseStatsFileToJson(statsFilePath: string): Promise<StatsAsset[]> {
   try {
-    const path = resolve(process.cwd(), statsFilePath)
-    return (await parseChunked(createReadStream(path))) as StatsCompilation
+    const path = resolve(process.cwd(), statsFilePath);
+    return (await parseChunked(createReadStream(path))) as StatsAsset[];
   } catch (error) {
     if (error instanceof Error) {
-      core.warning(error)
+      core.warning(error);
     }
-    return {assets: [], chunks: undefined} as StatsCompilation
+
+    return [] as StatsAsset[];
   }
 }

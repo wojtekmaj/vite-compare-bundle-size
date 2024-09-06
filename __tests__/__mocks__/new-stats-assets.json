@@ -1,90 +1,520 @@
-{
-  "assets": [
-    {
-      "type": "asset",
-      "name": "app.bundle.js",
-      "size": 1349951,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "license": "app.bundle.js.LICENSE.txt",
-          "sourceMap": "app.bundle.js.map"
-        },
-        "size": 1349951
-      },
-      "chunkNames": ["app"],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "app.bundle.js.map",
-          "size": 5608314,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "size": 5608314
+[
+  {
+    "filename": "assets/index-DMtGijW8.js",
+    "label": "assets/index-DMtGijW8.js",
+    "parsedSize": 7970,
+    "mapSize": 36835,
+    "statSize": 22625,
+    "gzipSize": 5265,
+    "source": [
+      {
+        "gzipSize": 5265,
+        "parsedSize": 7970,
+        "label": "home/runner/work/src/components/pages/dashboard/businesses",
+        "groups": [
+          {
+            "gzipSize": 396,
+            "parsedSize": 602,
+            "label": "logo_form.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/logo_form.tsx"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": ["app"],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [143],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "license",
-          "name": "app.bundle.js.LICENSE.txt",
-          "size": 2113,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "extractedComments": true,
-            "size": 2113
+          {
+            "gzipSize": 422,
+            "parsedSize": 558,
+            "label": "cards",
+            "groups": [
+              {
+                "gzipSize": 352,
+                "parsedSize": 504,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [143],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": true
-    },
-    {
-      "type": "asset",
-      "name": "manifest.json",
-      "size": 91,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "size": 91
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "related": {},
-      "chunks": [],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    }
-  ]
-}
+          {
+            "gzipSize": 452,
+            "parsedSize": 648,
+            "label": "transactions",
+            "groups": [
+              {
+                "gzipSize": 382,
+                "parsedSize": 594,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions"
+          },
+          {
+            "gzipSize": 480,
+            "parsedSize": 683,
+            "label": "places",
+            "groups": [
+              {
+                "gzipSize": 410,
+                "parsedSize": 629,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/places/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/places/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/places"
+          },
+          {
+            "gzipSize": 328,
+            "parsedSize": 413,
+            "label": "products",
+            "groups": [
+              {
+                "gzipSize": 258,
+                "parsedSize": 359,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/products/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/products/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/products"
+          },
+          {
+            "gzipSize": 379,
+            "parsedSize": 496,
+            "label": "accounts",
+            "groups": [
+              {
+                "gzipSize": 309,
+                "parsedSize": 442,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts"
+          },
+          {
+            "gzipSize": 393,
+            "parsedSize": 520,
+            "label": "devices",
+            "groups": [
+              {
+                "gzipSize": 323,
+                "parsedSize": 466,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices/table.tsx"
+              },
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices"
+          },
+          {
+            "gzipSize": 252,
+            "parsedSize": 464,
+            "label": "columns.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/columns.tsx"
+          },
+          {
+            "gzipSize": 367,
+            "parsedSize": 730,
+            "label": "business.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/business.tsx"
+          },
+          {
+            "gzipSize": 119,
+            "parsedSize": 110,
+            "label": "filters.styles.ts",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/filters.styles.ts"
+          },
+          {
+            "gzipSize": 156,
+            "parsedSize": 185,
+            "label": "filters.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/filters.tsx"
+          },
+          {
+            "gzipSize": 222,
+            "parsedSize": 293,
+            "label": "table.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/table.tsx"
+          },
+          {
+            "gzipSize": 1153,
+            "parsedSize": 2049,
+            "label": "edit",
+            "groups": [
+              {
+                "gzipSize": 410,
+                "parsedSize": 766,
+                "label": "flags_field.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/flags_field.tsx"
+              },
+              {
+                "gzipSize": 404,
+                "parsedSize": 844,
+                "label": "fields.ts",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/fields.ts"
+              },
+              {
+                "gzipSize": 113,
+                "parsedSize": 144,
+                "label": "form.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/form.tsx"
+              },
+              {
+                "gzipSize": 226,
+                "parsedSize": 295,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit"
+          },
+          {
+            "gzipSize": 146,
+            "parsedSize": 219,
+            "label": "index.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/index.tsx"
+          }
+        ],
+        "filename": "home/runner/work/src/components/pages/dashboard/businesses"
+      }
+    ],
+    "stats": [
+      {
+        "statSize": 22625,
+        "label": "src/components/pages/dashboard/businesses",
+        "groups": [
+          {
+            "statSize": 1941,
+            "label": "logo_form.tsx",
+            "filename": "src/components/pages/dashboard/businesses/logo_form.tsx"
+          },
+          {
+            "statSize": 1718,
+            "label": "cards",
+            "groups": [
+              {
+                "statSize": 1426,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/cards/table.tsx"
+              },
+              {
+                "statSize": 292,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/cards/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/cards"
+          },
+          {
+            "statSize": 1987,
+            "label": "transactions",
+            "groups": [
+              {
+                "statSize": 1674,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/transactions/table.tsx"
+              },
+              {
+                "statSize": 313,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/transactions/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/transactions"
+          },
+          {
+            "statSize": 1916,
+            "label": "places",
+            "groups": [
+              {
+                "statSize": 1621,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/places/table.tsx"
+              },
+              {
+                "statSize": 295,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/places/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/places"
+          },
+          {
+            "statSize": 1410,
+            "label": "products",
+            "groups": [
+              {
+                "statSize": 1109,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/products/table.tsx"
+              },
+              {
+                "statSize": 301,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/products/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/products"
+          },
+          {
+            "statSize": 1828,
+            "label": "accounts",
+            "groups": [
+              {
+                "statSize": 1527,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/accounts/table.tsx"
+              },
+              {
+                "statSize": 301,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/accounts/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/accounts"
+          },
+          {
+            "statSize": 1687,
+            "label": "devices",
+            "groups": [
+              {
+                "statSize": 1389,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/devices/table.tsx"
+              },
+              {
+                "statSize": 298,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/devices/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/devices"
+          },
+          {
+            "statSize": 1056,
+            "label": "columns.tsx",
+            "filename": "src/components/pages/dashboard/businesses/columns.tsx"
+          },
+          {
+            "statSize": 2353,
+            "label": "business.tsx",
+            "filename": "src/components/pages/dashboard/businesses/business.tsx"
+          },
+          {
+            "statSize": 263,
+            "label": "filters.styles.ts",
+            "filename": "src/components/pages/dashboard/businesses/filters.styles.ts"
+          },
+          {
+            "statSize": 622,
+            "label": "filters.tsx",
+            "filename": "src/components/pages/dashboard/businesses/filters.tsx"
+          },
+          {
+            "statSize": 1190,
+            "label": "table.tsx",
+            "filename": "src/components/pages/dashboard/businesses/table.tsx"
+          },
+          {
+            "statSize": 4016,
+            "label": "edit",
+            "groups": [
+              {
+                "statSize": 1387,
+                "label": "flags_field.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/flags_field.tsx"
+              },
+              {
+                "statSize": 1313,
+                "label": "fields.ts",
+                "filename": "src/components/pages/dashboard/businesses/edit/fields.ts"
+              },
+              {
+                "statSize": 375,
+                "label": "form.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/form.tsx"
+              },
+              {
+                "statSize": 941,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/edit"
+          },
+          {
+            "statSize": 638,
+            "label": "index.tsx",
+            "filename": "src/components/pages/dashboard/businesses/index.tsx"
+          }
+        ],
+        "filename": "src/components/pages/dashboard/businesses"
+      }
+    ],
+    "isAsset": true,
+    "isEntry": false,
+    "imports": [
+      "assets/react-Cw1k9jmu.js",
+      "assets/index-DJpzE9iO.js",
+      "assets/tabs-BsbGHryT.js",
+      "assets/auth_link-DTsdYx7T.js",
+      "assets/index-EmJHxyen.js",
+      "assets/logo_field-BotG0PWI.js",
+      "assets/index-BsW9dMjf.js",
+      "assets/empty_component-CX2uDlyv.js",
+      "assets/columns-s653Seau.js",
+      "assets/loyalty-card-Bvv1jVx1.js",
+      "assets/reward_name-lRqlhlNO.js",
+      "assets/transactions-large-bI-ITjxm.js",
+      "assets/columns-BiWq9_V6.js",
+      "assets/content-CYGfo7MT.js",
+      "assets/login_as_button-BOFf7KEz.js",
+      "assets/device-large-DcD0g6gU.js",
+      "assets/useDebouncedValue-DRmhwRqC.js",
+      "assets/useLocationParam-DVlB9Zti.js",
+      "assets/index-V1MraGnm.js",
+      "assets/usePaginatedItems-CuTmecVv.js",
+      "assets/stamp-CO_Lhz6X.js",
+      "assets/user-CEuvWIsp.js",
+      "assets/badge.styles-CvxJNbOX.js",
+      "assets/index-CJlJ2PzD.js",
+      "assets/get_location_from_address-DBBmQ_0a.js"
+    ]
+  },
+  {
+    "filename": "assets/logo_field-BotG0PWI.js",
+    "label": "assets/logo_field-BotG0PWI.js",
+    "parsedSize": 1509,
+    "mapSize": 6953,
+    "statSize": 3361,
+    "gzipSize": 962,
+    "source": [
+      {
+        "gzipSize": 962,
+        "parsedSize": 1509,
+        "label": "home/runner/work/src/components",
+        "groups": [
+          {
+            "gzipSize": 569,
+            "parsedSize": 982,
+            "label": "form",
+            "groups": [
+              {
+                "gzipSize": 78,
+                "parsedSize": 58,
+                "label": "popup_field.styles.ts",
+                "filename": "home/runner/work/src/components/form/popup_field.styles.ts"
+              },
+              {
+                "gzipSize": 491,
+                "parsedSize": 924,
+                "label": "popup_field.tsx",
+                "filename": "home/runner/work/src/components/form/popup_field.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/form"
+          },
+          {
+            "gzipSize": 393,
+            "parsedSize": 527,
+            "label": "pages/dashboard/settings/public_info",
+            "groups": [
+              {
+                "gzipSize": 177,
+                "parsedSize": 221,
+                "label": "logo_form.styles.ts",
+                "filename": "home/runner/work/src/components/pages/dashboard/settings/public_info/logo_form.styles.ts"
+              },
+              {
+                "gzipSize": 216,
+                "parsedSize": 306,
+                "label": "logo_field.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/settings/public_info/logo_field.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/settings/public_info"
+          }
+        ],
+        "filename": "home/runner/work/src/components"
+      }
+    ],
+    "stats": [
+      {
+        "statSize": 3361,
+        "label": "src/components",
+        "groups": [
+          {
+            "statSize": 2451,
+            "label": "form",
+            "groups": [
+              {
+                "statSize": 125,
+                "label": "popup_field.styles.ts",
+                "filename": "src/components/form/popup_field.styles.ts"
+              },
+              {
+                "statSize": 2326,
+                "label": "popup_field.tsx",
+                "filename": "src/components/form/popup_field.tsx"
+              }
+            ],
+            "filename": "src/components/form"
+          },
+          {
+            "statSize": 910,
+            "label": "pages/dashboard/settings/public_info",
+            "groups": [
+              {
+                "statSize": 423,
+                "label": "logo_form.styles.ts",
+                "filename": "src/components/pages/dashboard/settings/public_info/logo_form.styles.ts"
+              },
+              {
+                "statSize": 487,
+                "label": "logo_field.tsx",
+                "filename": "src/components/pages/dashboard/settings/public_info/logo_field.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/settings/public_info"
+          }
+        ],
+        "filename": "src/components"
+      }
+    ],
+    "isAsset": true,
+    "isEntry": false,
+    "imports": ["assets/index-DJpzE9iO.js", "assets/react-Cw1k9jmu.js", "assets/index-V1MraGnm.js"]
+  }
+]

@@ -1,5 +1,11 @@
-name: 'Bundle comparison'
+name: 'Vite compare bundle size'
+
 description: 'Compare the bundle size between the base branch and the current branch'
+
+branding:
+  icon: bar-chart-2
+  color: yellow
+
 inputs:
   current-stats-json-path:
     description: 'The path to the current stats.json file'

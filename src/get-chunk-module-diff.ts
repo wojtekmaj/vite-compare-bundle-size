@@ -1,17 +1,18 @@
-import type {StatsCompilation} from 'webpack'
-import {chunkModuleNameToSizeMap} from './name-to-size-map'
-import type {WebpackStatsDiff} from './types'
-import {webpackStatsDiff} from './webpack-stats-diff'
+import { chunkModuleNameToSizeMap } from './name-to-size-map.js';
+import { viteStatsDiff } from './vite-stats-diff.js';
+
+import type { ViteStatsDiff, StatsAsset } from './types.js';
 
 export function getChunkModuleDiff(
-  oldStats: Pick<StatsCompilation, 'chunks'>,
-  newStats: Pick<StatsCompilation, 'chunks'>
-): WebpackStatsDiff | null {
-  if (!oldStats.chunks || !newStats.chunks) {
-    return null
+  oldStatsAsset: StatsAsset[],
+  newStatsAsset: StatsAsset[],
+): ViteStatsDiff | null {
+  if (!oldStatsAsset || !newStatsAsset) {
+    return null;
   }
-  return webpackStatsDiff(
-    chunkModuleNameToSizeMap(oldStats.chunks),
-    chunkModuleNameToSizeMap(newStats.chunks)
-  )
+
+  return viteStatsDiff(
+    chunkModuleNameToSizeMap(oldStatsAsset),
+    chunkModuleNameToSizeMap(newStatsAsset),
+  );
 }

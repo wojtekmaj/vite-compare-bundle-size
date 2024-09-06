@@ -1,4 +1,5 @@
-const BYTES_PER_KILOBYTE = 1024
+const BYTES_PER_KILOBYTE = 1024;
+
 const denominations = [
   'B', // 1 Byte
   'kB', // 1 Kilobyte
@@ -9,8 +10,8 @@ const denominations = [
   'EB', // 1 Exabyte
   'ZB', // 1 Zettabyte
   'YB', // 1 Yottabyte
-  'BB' // 1 brontobyte
-]
+  'BB', // 1 brontobyte
+];
 
 /**
  * Prints a human readable file size.
@@ -20,18 +21,18 @@ const denominations = [
  */
 export function formatFileSizeIEC(bytes: number | null, precision = 2): string {
   if (bytes == null || Number.isNaN(bytes)) {
-    return 'N/A'
+    return 'N/A';
   }
-  if (bytes === 0) return `0 ${denominations[0]}`
 
-  const absBytes = Math.abs(bytes)
+  if (bytes === 0) return `0 ${denominations[0]}`;
 
-  const denominationIndex = Math.floor(
-    Math.log(absBytes) / Math.log(BYTES_PER_KILOBYTE)
-  )
+  const absBytes = Math.abs(bytes);
 
-  const value = absBytes / Math.pow(BYTES_PER_KILOBYTE, denominationIndex)
+  const denominationIndex = Math.floor(Math.log(absBytes) / Math.log(BYTES_PER_KILOBYTE));
 
-  const valueWithStrippedZeroDecimals = parseFloat(value.toFixed(precision))
-  return `${valueWithStrippedZeroDecimals} ${denominations[denominationIndex]}`
+  const value = absBytes / BYTES_PER_KILOBYTE ** denominationIndex;
+
+  const valueWithStrippedZeroDecimals = Number.parseFloat(value.toFixed(precision));
+
+  return `${valueWithStrippedZeroDecimals} ${denominations[denominationIndex]}`;
 }

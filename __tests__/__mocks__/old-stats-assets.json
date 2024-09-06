@@ -1,646 +1,468 @@
-{
-  "assets": [
-    {
-      "type": "asset",
-      "name": "app.bundle.js",
-      "size": 1089499,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "license": "app.bundle.js.LICENSE.txt",
-          "sourceMap": "app.bundle.js.map",
-          "gzipped": "app.bundle.js.gz"
-        },
-        "size": 1089499
-      },
-      "chunkNames": ["app"],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "app.bundle.js.map",
-          "size": 4328298,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "app.bundle.js.map.gz"
-            },
-            "size": 4328298
+[
+  {
+    "filename": "assets/index-By5Bzhe3.js",
+    "label": "assets/index-By5Bzhe3.js",
+    "parsedSize": 7970,
+    "mapSize": 36835,
+    "statSize": 22625,
+    "gzipSize": 5265,
+    "source": [
+      {
+        "gzipSize": 5265,
+        "parsedSize": 7970,
+        "label": "home/runner/work/src/components/pages/dashboard/businesses",
+        "groups": [
+          {
+            "gzipSize": 396,
+            "parsedSize": 602,
+            "label": "logo_form.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/logo_form.tsx"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": ["app"],
-          "auxiliaryChunkIdHints": [],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "app.bundle.js.map.gz",
-              "size": 1053681,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 1053681
+          {
+            "gzipSize": 422,
+            "parsedSize": 558,
+            "label": "cards",
+            "groups": [
+              {
+                "gzipSize": 352,
+                "parsedSize": 504,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": true
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [143],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "app.bundle.js.gz",
-          "size": 304515,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 304515
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/cards"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "license",
-          "name": "app.bundle.js.LICENSE.txt",
-          "size": 2113,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "extractedComments": true,
-            "related": {
-              "gzipped": "app.bundle.js.LICENSE.txt.gz"
-            },
-            "size": 2113
-          },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "app.bundle.js.LICENSE.txt.gz",
-              "size": 457,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 457
+          {
+            "gzipSize": 452,
+            "parsedSize": 648,
+            "label": "transactions",
+            "groups": [
+              {
+                "gzipSize": 382,
+                "parsedSize": 594,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [143],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": true
-    },
-    {
-      "type": "asset",
-      "name": "296.chunk.js",
-      "size": 127558,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "sourceMap": "296.chunk.js.map",
-          "gzipped": "296.chunk.js.gz"
-        },
-        "size": 127558
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "296.chunk.js.map",
-          "size": 570499,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "296.chunk.js.map.gz"
-            },
-            "size": 570499
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/transactions"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "296.chunk.js.map.gz",
-              "size": 140092,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 140092
+          {
+            "gzipSize": 480,
+            "parsedSize": 683,
+            "label": "places",
+            "groups": [
+              {
+                "gzipSize": 410,
+                "parsedSize": 629,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/places/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [296],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "296.chunk.js.gz",
-          "size": 35889,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 35889
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/places/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/places"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [296],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "288.chunk.js",
-      "size": 58610,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "sourceMap": "288.chunk.js.map",
-          "gzipped": "288.chunk.js.gz"
-        },
-        "size": 58610
-      },
-      "chunkNames": [],
-      "chunkIdHints": ["vendors"],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "288.chunk.js.map",
-          "size": 147474,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "288.chunk.js.map.gz"
-            },
-            "size": 147474
-          },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": ["vendors"],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "288.chunk.js.map.gz",
-              "size": 41152,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 41152
+          {
+            "gzipSize": 328,
+            "parsedSize": 413,
+            "label": "products",
+            "groups": [
+              {
+                "gzipSize": 258,
+                "parsedSize": 359,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/products/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [288],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "288.chunk.js.gz",
-          "size": 16720,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 16720
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/products/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/products"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [288],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "920.chunk.js",
-      "size": 56302,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "sourceMap": "920.chunk.js.map",
-          "gzipped": "920.chunk.js.gz"
-        },
-        "size": 56302
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "920.chunk.js.map",
-          "size": 244016,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "920.chunk.js.map.gz"
-            },
-            "size": 244016
-          },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "920.chunk.js.map.gz",
-              "size": 65406,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 65406
+          {
+            "gzipSize": 379,
+            "parsedSize": 496,
+            "label": "accounts",
+            "groups": [
+              {
+                "gzipSize": 309,
+                "parsedSize": 442,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [920],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "920.chunk.js.gz",
-          "size": 17495,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 17495
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/accounts"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [920],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "912.chunk.js",
-      "size": 45438,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "sourceMap": "912.chunk.js.map",
-          "gzipped": "912.chunk.js.gz"
-        },
-        "size": 45438
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "912.chunk.js.map",
-          "size": 189537,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "912.chunk.js.map.gz"
-            },
-            "size": 189537
-          },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "912.chunk.js.map.gz",
-              "size": 52156,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 52156
+          {
+            "gzipSize": 393,
+            "parsedSize": 520,
+            "label": "devices",
+            "groups": [
+              {
+                "gzipSize": 323,
+                "parsedSize": 466,
+                "label": "table.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices/table.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [912],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "912.chunk.js.gz",
-          "size": 14657,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 14657
+              {
+                "gzipSize": 70,
+                "parsedSize": 54,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/devices"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [912],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "699.chunk.js",
-      "size": 27026,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "javascriptModule": false,
-        "minimized": true,
-        "related": {
-          "sourceMap": "699.chunk.js.map",
-          "gzipped": "699.chunk.js.gz"
-        },
-        "size": 27026
-      },
-      "chunkNames": [],
-      "chunkIdHints": ["vendors"],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "sourceMap",
-          "name": "699.chunk.js.map",
-          "size": 129658,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "development": true,
-            "related": {
-              "gzipped": "699.chunk.js.map.gz"
-            },
-            "size": 129658
+          {
+            "gzipSize": 252,
+            "parsedSize": 464,
+            "label": "columns.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/columns.tsx"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": ["vendors"],
-          "filteredRelated": 0,
-          "related": [
-            {
-              "type": "gzipped",
-              "name": "699.chunk.js.map.gz",
-              "size": 25382,
-              "emitted": false,
-              "comparedForEmit": true,
-              "cached": false,
-              "info": {
-                "compressed": true,
-                "size": 25382
+          {
+            "gzipSize": 367,
+            "parsedSize": 730,
+            "label": "business.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/business.tsx"
+          },
+          {
+            "gzipSize": 119,
+            "parsedSize": 110,
+            "label": "filters.styles.ts",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/filters.styles.ts"
+          },
+          {
+            "gzipSize": 156,
+            "parsedSize": 185,
+            "label": "filters.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/filters.tsx"
+          },
+          {
+            "gzipSize": 222,
+            "parsedSize": 293,
+            "label": "table.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/table.tsx"
+          },
+          {
+            "gzipSize": 1153,
+            "parsedSize": 2049,
+            "label": "edit",
+            "groups": [
+              {
+                "gzipSize": 410,
+                "parsedSize": 766,
+                "label": "flags_field.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/flags_field.tsx"
               },
-              "chunkNames": [],
-              "chunkIdHints": [],
-              "auxiliaryChunkNames": [],
-              "auxiliaryChunkIdHints": [],
-              "related": {},
-              "chunks": [],
-              "auxiliaryChunks": [],
-              "isOverSizeLimit": false
-            }
-          ],
-          "chunks": [],
-          "auxiliaryChunks": [699],
-          "isOverSizeLimit": false
-        },
-        {
-          "type": "gzipped",
-          "name": "699.chunk.js.gz",
-          "size": 6287,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 6287
+              {
+                "gzipSize": 404,
+                "parsedSize": 844,
+                "label": "fields.ts",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/fields.ts"
+              },
+              {
+                "gzipSize": 113,
+                "parsedSize": 144,
+                "label": "form.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/form.tsx"
+              },
+              {
+                "gzipSize": 226,
+                "parsedSize": 295,
+                "label": "index.tsx",
+                "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit/index.tsx"
+              }
+            ],
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/edit"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [699],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    },
-    {
-      "type": "asset",
-      "name": "manifest.json",
-      "size": 551,
-      "emitted": false,
-      "comparedForEmit": true,
-      "cached": false,
-      "info": {
-        "related": {
-          "gzipped": "manifest.json.gz"
-        },
-        "size": 551
-      },
-      "chunkNames": [],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "filteredRelated": 0,
-      "related": [
-        {
-          "type": "gzipped",
-          "name": "manifest.json.gz",
-          "size": 151,
-          "emitted": false,
-          "comparedForEmit": true,
-          "cached": false,
-          "info": {
-            "compressed": true,
-            "size": 151
+          {
+            "gzipSize": 146,
+            "parsedSize": 219,
+            "label": "index.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/businesses/index.tsx"
+          }
+        ],
+        "filename": "home/runner/work/src/components/pages/dashboard/businesses"
+      }
+    ],
+    "stats": [
+      {
+        "statSize": 22625,
+        "label": "src/components/pages/dashboard/businesses",
+        "groups": [
+          {
+            "statSize": 1941,
+            "label": "logo_form.tsx",
+            "filename": "src/components/pages/dashboard/businesses/logo_form.tsx"
           },
-          "chunkNames": [],
-          "chunkIdHints": [],
-          "auxiliaryChunkNames": [],
-          "auxiliaryChunkIdHints": [],
-          "related": {},
-          "chunks": [],
-          "auxiliaryChunks": [],
-          "isOverSizeLimit": false
-        }
-      ],
-      "chunks": [],
-      "auxiliaryChunks": [],
-      "isOverSizeLimit": false
-    }
-  ]
-}
+          {
+            "statSize": 1718,
+            "label": "cards",
+            "groups": [
+              {
+                "statSize": 1426,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/cards/table.tsx"
+              },
+              {
+                "statSize": 292,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/cards/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/cards"
+          },
+          {
+            "statSize": 1987,
+            "label": "transactions",
+            "groups": [
+              {
+                "statSize": 1674,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/transactions/table.tsx"
+              },
+              {
+                "statSize": 313,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/transactions/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/transactions"
+          },
+          {
+            "statSize": 1916,
+            "label": "places",
+            "groups": [
+              {
+                "statSize": 1621,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/places/table.tsx"
+              },
+              {
+                "statSize": 295,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/places/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/places"
+          },
+          {
+            "statSize": 1410,
+            "label": "products",
+            "groups": [
+              {
+                "statSize": 1109,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/products/table.tsx"
+              },
+              {
+                "statSize": 301,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/products/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/products"
+          },
+          {
+            "statSize": 1828,
+            "label": "accounts",
+            "groups": [
+              {
+                "statSize": 1527,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/accounts/table.tsx"
+              },
+              {
+                "statSize": 301,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/accounts/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/accounts"
+          },
+          {
+            "statSize": 1687,
+            "label": "devices",
+            "groups": [
+              {
+                "statSize": 1389,
+                "label": "table.tsx",
+                "filename": "src/components/pages/dashboard/businesses/devices/table.tsx"
+              },
+              {
+                "statSize": 298,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/devices/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/devices"
+          },
+          {
+            "statSize": 1056,
+            "label": "columns.tsx",
+            "filename": "src/components/pages/dashboard/businesses/columns.tsx"
+          },
+          {
+            "statSize": 2353,
+            "label": "business.tsx",
+            "filename": "src/components/pages/dashboard/businesses/business.tsx"
+          },
+          {
+            "statSize": 263,
+            "label": "filters.styles.ts",
+            "filename": "src/components/pages/dashboard/businesses/filters.styles.ts"
+          },
+          {
+            "statSize": 622,
+            "label": "filters.tsx",
+            "filename": "src/components/pages/dashboard/businesses/filters.tsx"
+          },
+          {
+            "statSize": 1190,
+            "label": "table.tsx",
+            "filename": "src/components/pages/dashboard/businesses/table.tsx"
+          },
+          {
+            "statSize": 4016,
+            "label": "edit",
+            "groups": [
+              {
+                "statSize": 1387,
+                "label": "flags_field.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/flags_field.tsx"
+              },
+              {
+                "statSize": 1313,
+                "label": "fields.ts",
+                "filename": "src/components/pages/dashboard/businesses/edit/fields.ts"
+              },
+              {
+                "statSize": 375,
+                "label": "form.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/form.tsx"
+              },
+              {
+                "statSize": 941,
+                "label": "index.tsx",
+                "filename": "src/components/pages/dashboard/businesses/edit/index.tsx"
+              }
+            ],
+            "filename": "src/components/pages/dashboard/businesses/edit"
+          },
+          {
+            "statSize": 638,
+            "label": "index.tsx",
+            "filename": "src/components/pages/dashboard/businesses/index.tsx"
+          }
+        ],
+        "filename": "src/components/pages/dashboard/businesses"
+      }
+    ],
+    "isAsset": true,
+    "isEntry": false,
+    "imports": [
+      "assets/react-DdVHE3h_.js",
+      "assets/index-C8f_LQnX.js",
+      "assets/tabs-BB9b2uRG.js",
+      "assets/auth_link-DR4Ieq0b.js",
+      "assets/index-BAkiwyI0.js",
+      "assets/logo_field-Cts83rrl.js",
+      "assets/index-CN6AxuqV.js",
+      "assets/empty_component-DI9e3W71.js",
+      "assets/columns-D7Rf695x.js",
+      "assets/loyalty-card-Bvv1jVx1.js",
+      "assets/reward_name-BYVsFTAu.js",
+      "assets/transactions-large-DK-4x2CC.js",
+      "assets/columns-B2rM1hHU.js",
+      "assets/content-DcYDRWIr.js",
+      "assets/login_as_button-CsBaOzT4.js",
+      "assets/device-large-CV8lOt_J.js",
+      "assets/useDebouncedValue-DmsJbfG3.js",
+      "assets/useLocationParam-Bj4deK2I.js",
+      "assets/index-CVh5BAwP.js",
+      "assets/usePaginatedItems-limoTBkD.js",
+      "assets/stamp-Cmwz7amF.js",
+      "assets/user-CEuvWIsp.js",
+      "assets/badge.styles-6bkudlky.js",
+      "assets/index-BDh1vVOH.js",
+      "assets/get_location_from_address-CZ7AEEfs.js"
+    ]
+  },
+  {
+    "filename": "assets/login_as_button-CsBaOzT4.js",
+    "label": "assets/login_as_button-CsBaOzT4.js",
+    "parsedSize": 502,
+    "mapSize": 2536,
+    "statSize": 1242,
+    "gzipSize": 359,
+    "source": [
+      {
+        "gzipSize": 359,
+        "parsedSize": 502,
+        "label": "home/runner/work/src/components/pages/dashboard/accounts",
+        "groups": [
+          {
+            "gzipSize": 127,
+            "parsedSize": 184,
+            "label": "columns.ts",
+            "filename": "home/runner/work/src/components/pages/dashboard/accounts/columns.ts"
+          },
+          {
+            "gzipSize": 232,
+            "parsedSize": 318,
+            "label": "login_as_button.tsx",
+            "filename": "home/runner/work/src/components/pages/dashboard/accounts/login_as_button.tsx"
+          }
+        ],
+        "filename": "home/runner/work/src/components/pages/dashboard/accounts"
+      }
+    ],
+    "stats": [
+      {
+        "statSize": 1242,
+        "label": "src/components/pages/dashboard/accounts",
+        "groups": [
+          {
+            "statSize": 588,
+            "label": "columns.ts",
+            "filename": "src/components/pages/dashboard/accounts/columns.ts"
+          },
+          {
+            "statSize": 654,
+            "label": "login_as_button.tsx",
+            "filename": "src/components/pages/dashboard/accounts/login_as_button.tsx"
+          }
+        ],
+        "filename": "src/components/pages/dashboard/accounts"
+      }
+    ],
+    "isAsset": true,
+    "isEntry": false,
+    "imports": ["assets/index-C8f_LQnX.js", "assets/react-DdVHE3h_.js"]
+  }
+]

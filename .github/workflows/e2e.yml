@@ -1,59 +1,53 @@
-name: 'build-test'
-on: # rebuild any PRs and main branch changes
+name: E2E
+
+on:
   pull_request:
-    branches-ignore:
-      - 'dependabot/**'
-  pull_request_target:
-    branches:
-      - 'dependabot/**'
+    branches: [main]
 
 permissions:
   contents: read
   pull-requests: write
 
+env:
+  HUSKY: 0
+
 jobs:
-  build: # make sure build/ci work properly
+  e2e:
+    name: E2E tests
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - run: |
-          npm install
-      - run: |
-          npm run all
-  test: # make sure the action works on a clean machine without building
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ./
-        with:
-          current-stats-json-path: ./__tests__/__mocks__/new-stats-with-chunks.json
-          base-stats-json-path: ./__tests__/__mocks__/old-stats-with-chunks.json
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          title: With chunk and module information
+      - name: Checkout
+        uses: actions/checkout@v4
+
       - uses: actions/checkout@v4
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/new-stats-assets.json
           base-stats-json-path: ./__tests__/__mocks__/old-stats-assets.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/old-stats-assets.json
           base-stats-json-path: ./__tests__/__mocks__/new-stats-assets.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           title: Flipped around
+
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/non-existent.json
           base-stats-json-path: ./__tests__/__mocks__/non-existent.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           title: Non existent
+
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/old-stats-assets.json
           base-stats-json-path: ./__tests__/__mocks__/old-stats-assets.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
           title: No changes
+
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/new-stats-assets.json
@@ -61,6 +55,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           title: "With describe-assets: 'none'"
           describe-assets: none
+
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/old-stats-assets.json

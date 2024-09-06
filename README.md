@@ -1,31 +1,44 @@
-# Vite compare bundle size action
+# wojtekmaj/vite-compare-bundle-size
 
-An action that compares 2 Vite compilation stats files, and comments on the PR with a description of the difference
+This action compares two Vite compilation stats files and comments on the PR with a description of the difference.
 
-## How to use
+## Usage
 
-In your application, ensure you output the `stats.json` from `vite-bundle-analyzer`:
+Install `vite-bundle-analyzer`:
+
+```bash
+npm install vite-bundle-analyzer --save-dev
+```
+
+or:
+
+```bash
+yarn add vite-bundle-analyzer --dev
+```
+
+In `vite.config.ts`, configure `vite-bundle-analyzer` to output JSON:
 
 ```ts
-// vite.config.ts
-import { defineConfig } from "vite";
-import { analyzer } from "vite-bundle-analyzer";
+import { defineConfig } from 'vite';
+import { analyzer } from 'vite-bundle-analyzer';
 
 export default defineConfig({
   vite: {
     plugins: [
       analyzer({
-        analyzerMode: "json",
+        analyzerMode: 'json',
       }),
     ],
   },
 });
 ```
 
-Then, in your action configuration, build both the head and the branch (in any way you see fit) and pass paths to the stats.json files as inputs on this action
+> [!TIP]
+> You could enable this plugin conditionally in GitHub Actions by checking for `process.env.ANALYZE` environment variable.
 
-```yaml
-# .github/workflows/compare-bundle-size.yml
+In your action configuration, build both the head and the branch (in any way you see fit) and pass paths to the stats.json files as inputs on this action:
+
+```yml
 name: Compare bundle size
 
 on:
@@ -108,10 +121,23 @@ This action requires the `write` permission for the [`permissions.pull-requests`
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------- | -------- | ------ |
 | current-stats-json-path | The path to the current stats.json file                                                                             | true     | string |
 | base-stats-json-path    | The path to the base stats.json file                                                                                | true     | string |
-| github-token            | The Github token                                                                                                    | true     | string |
+| github-token            | The GitHub token to use for authentication                                                                          | true     | string |
 | title                   | An optional addition to the title, which also helps key comments, useful if running more than 1 copy of this action | false    | string |
 | describe-assets         | Option for asset description output. One of "all" (default), "changed-only", or "none".                             | false    | string |
 
-## Example PR Comment
+## License
 
-https://github.com/github/webpack-bundlesize-compare-action/pull/50#issuecomment-1054919780
+The MIT License.
+
+## Author
+
+<table>
+  <tr>
+    <td >
+      <img src="https://avatars.githubusercontent.com/u/5426427?v=4&s=128" width="64" height="64" alt="Wojciech Maj">
+    </td>
+    <td>
+      <a href="https://github.com/wojtekmaj">Wojciech Maj</a>
+    </td>
+  </tr>
+</table>

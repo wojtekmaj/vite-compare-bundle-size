@@ -47,7 +47,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:^1.8.3":
+"@biomejs/biome@npm:1.8.3":
   version: 1.8.3
   resolution: "@biomejs/biome@npm:1.8.3"
   dependencies:
@@ -736,7 +736,7 @@ __metadata:
   dependencies:
     "@actions/core": "npm:^1.10.1"
     "@actions/github": "npm:^6.0.0"
-    "@biomejs/biome": "npm:^1.8.3"
+    "@biomejs/biome": "npm:1.8.3"
     "@discoveryjs/json-ext": "npm:^0.6.0"
     "@types/node": "npm:20.14.11"
     "@vercel/ncc": "npm:^0.38.1"

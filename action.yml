@@ -1,4 +1,4 @@
-name: 'Vite compare bundle size'
+name: 'Vite Compare Bundle Size'
 
 description: 'Compare the bundle size between the base branch and the current branch'
 

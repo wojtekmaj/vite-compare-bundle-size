@@ -1,4 +1,4 @@
-# wojtekmaj/vite-compare-bundle-size
+# vite-compare-bundle-size
 
 This action compares two Vite compilation stats files and comments on the PR with a description of the difference.
 

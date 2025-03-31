@@ -7,7 +7,7 @@
   "main": "./lib/index.js",
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
-    "clean": "rimraf dist lib",
+    "clean": "node -e \"fs.rmSync('./dist', { recursive: true, force: true }) && fs.rmSync('./lib', { recursive: true, force: true })\"",
     "format": "biome format",
     "lint": "biome lint",
     "package": "ncc build --source-map --license licenses.txt",
@@ -37,7 +37,6 @@
     "husky": "^9.0.0",
     "js-yaml": "^4.1.0",
     "prettier": "^3.3.3",
-    "rimraf": "^5.0.0",
     "terser": "^5.31.3",
     "typescript": "^5.5.2",
     "vitest": "^3.0.5"

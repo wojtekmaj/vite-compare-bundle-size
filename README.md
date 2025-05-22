@@ -106,7 +106,7 @@ jobs:
         uses: actions/download-artifact@v4
 
       - name: Compare bundle size
-      - uses: wojtekmaj/vite-compare-bundle-size@v1
+        uses: wojtekmaj/vite-compare-bundle-size@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           current-stats-json-path: ./head-stats/stats.json

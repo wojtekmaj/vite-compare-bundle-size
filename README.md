@@ -89,7 +89,7 @@ jobs:
         run: npm run build
 
       - name: Upload stats.json
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: base-stats
           path: ./dist/stats.json

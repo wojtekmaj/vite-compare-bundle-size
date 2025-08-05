@@ -4,7 +4,7 @@ import {
   printTotalAssetTable,
 } from './print-markdown.js';
 
-import type { ViteStatsDiff, DescribeAssetsOptions } from './types.js';
+import type { DescribeAssetsOptions, ViteStatsDiff } from './types.js';
 
 export function getIdentifierComment(key: string): string {
   return `<!--- bundlestats-action-comment${key ? ` key:${key}` : ''} --->`;

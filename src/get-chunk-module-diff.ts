@@ -1,7 +1,7 @@
 import { chunkModuleNameToSizeMap } from './name-to-size-map.js';
 import { viteStatsDiff } from './vite-stats-diff.js';
 
-import type { ViteStatsDiff, StatsAsset } from './types.js';
+import type { StatsAsset, ViteStatsDiff } from './types.js';
 
 export function getChunkModuleDiff(
   oldStatsAsset: StatsAsset[],

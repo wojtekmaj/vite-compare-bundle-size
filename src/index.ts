@@ -5,11 +5,10 @@ import { getChunkModuleDiff } from './get-chunk-module-diff.js';
 import { getStatsDiff } from './get-stats-diff.js';
 import { parseStatsFileToJson } from './parse-stats-file-to-json.js';
 import { getCommentBody, getIdentifierComment } from './to-comment-body.js';
-
 import {
-  isDescribeAssetsSection,
-  type DescribeAssetsSection,
   type DescribeAssetsOptions,
+  type DescribeAssetsSection,
+  isDescribeAssetsSection,
 } from './types.js';
 
 export function getDescribeAssetsOptions(rawOptionString: string): DescribeAssetsOptions {

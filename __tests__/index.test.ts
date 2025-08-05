@@ -1,7 +1,8 @@
-import { expect, describe, test, beforeAll } from 'vitest';
+import { beforeAll, describe, expect, test } from 'vitest';
 
-import { getStatsDiff } from '../src/get-stats-diff.js';
 import { getChunkModuleDiff } from '../src/get-chunk-module-diff.js';
+import { getStatsDiff } from '../src/get-stats-diff.js';
+import { getDescribeAssetsOptions } from '../src/index.js';
 import {
   printAssetTablesByGroup,
   printChunkModulesTable,
@@ -10,13 +11,12 @@ import {
 import {
   type DescribeAssetsOptions,
   type DescribeAssetsSection,
-  type ViteStatsDiff,
   describeAssetsSections,
+  type ViteStatsDiff,
 } from '../src/types.js';
-import { getDescribeAssetsOptions } from '../src/index.js';
 
-import oldStatsAssets from './__mocks__/old-stats-assets.json';
 import newStatsAssets from './__mocks__/new-stats-assets.json';
+import oldStatsAssets from './__mocks__/old-stats-assets.json';
 
 test('Shows stats when files are removed', async () => {
   const statsDiff = getStatsDiff(oldStatsAssets, newStatsAssets);

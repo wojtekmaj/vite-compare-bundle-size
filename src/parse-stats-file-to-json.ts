@@ -1,6 +1,5 @@
 import { createReadStream } from 'node:fs';
 import { resolve } from 'node:path';
-
 import * as core from '@actions/core';
 import { parseChunked } from '@discoveryjs/json-ext';
 

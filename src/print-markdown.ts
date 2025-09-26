@@ -71,7 +71,7 @@ function toFileSizeDiffCell(asset: AssetDiff): string {
 }
 
 function printAssetTableRow(asset: AssetDiff): string {
-  return [asset.name, toFileSizeDiffCell(asset), conditionalPercentage(asset.diffPercentage)].join(
+  return [asset.name.replaceAll(/([_*`$])/g, '\\$1'), toFileSizeDiffCell(asset), conditionalPercentage(asset.diffPercentage)].join(
     ' | ',
   );
 }

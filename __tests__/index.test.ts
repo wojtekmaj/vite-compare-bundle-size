@@ -15,8 +15,8 @@ import {
   type ViteStatsDiff,
 } from '../src/types.js';
 
-import newStatsAssets from './__mocks__/new-stats-assets.json';
-import oldStatsAssets from './__mocks__/old-stats-assets.json';
+import newStatsAssets from './__mocks__/new-stats-assets.json' with { type: 'json' };
+import oldStatsAssets from './__mocks__/old-stats-assets.json' with { type: 'json' };
 
 test('Shows stats when files are removed', async () => {
   const statsDiff = getStatsDiff(oldStatsAssets, newStatsAssets);

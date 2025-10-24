@@ -39,7 +39,7 @@
     "prettier": "^3.3.3",
     "terser": "^5.31.3",
     "typescript": "^5.9.2",
-    "vitest": "^3.2.3"
+    "vitest": "^4.0.1"
   },
   "packageManager": "yarn@4.10.3"
 }

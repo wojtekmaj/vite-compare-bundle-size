@@ -37,8 +37,15 @@ export type DescribeAssetsSection = (typeof describeAssetsSections)[number];
 
 export type DescribeAssetsOptions = { [S in DescribeAssetsSection]: boolean };
 
+export type SourceGroup = {
+  gzipSize: number;
+  parsedSize: number;
+  brotliSize?: number; // Present in v1 only
+  label: string;
+  groups?: SourceGroup[];
+};
+
 export type StatsGroup = {
-  statSize: number;
   label: string;
   groups?: StatsGroup[];
 };
@@ -47,9 +54,10 @@ export type StatsAsset = {
   filename: string;
   label: string;
   parsedSize: number;
-  statSize: number;
   gzipSize: number;
-  stats?: StatsGroup[];
+  brotliSize?: number; // Present in v1 only
+  source?: SourceGroup[];
+  stats?: StatsGroup[]; // Present in v0 only
 };
 
 export const isDescribeAssetsSection = (option: string): option is DescribeAssetsSection => {

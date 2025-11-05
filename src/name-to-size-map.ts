@@ -1,4 +1,4 @@
-import type { SizesWithName, StatsAsset, StatsGroup } from './types.js';
+import type { SizesWithName, SourceGroup, StatsAsset, StatsGroup } from './types.js';
 
 type StatEntry = [label: string, SizesWithName];
 
@@ -6,18 +6,26 @@ function formatLabel(label: string): string {
   return label.replace(/-[a-zA-Z0-9_-]{8}\./, '-[hash].');
 }
 
-function formatId(asset: StatsAsset | StatsGroup): string {
-  const statsOrGroups = 'stats' in asset ? asset.stats : 'groups' in asset ? asset.groups : null;
+function formatId(asset: StatsAsset | SourceGroup, stats?: StatsGroup | null): string {
+  const sourceOrGroups = 'source' in asset ? asset.source : 'groups' in asset ? asset.groups : null;
+  // v0 has 'stats' aside from 'source' and 'stats' had better labels
+  const assetStats = 'stats' in asset ? asset.stats : null;
 
-  return statsOrGroups && statsOrGroups.length > 0
-    ? statsOrGroups
-        .map((statOrGroup) => formatId(statOrGroup))
+  return sourceOrGroups?.length
+    ? sourceOrGroups
+        .map((sourceOrGroup) => {
+          const assetStatsWithMatchingLabel = assetStats
+            ? assetStats.find((s) => sourceOrGroup.label.endsWith(s.label))
+            : null;
+
+          return formatId(sourceOrGroup, assetStatsWithMatchingLabel);
+        })
         .sort()
         .join('|')
-    : formatLabel(asset.label);
+    : formatLabel(stats ? stats.label : asset.label);
 }
 
-function collectStatsInGroup(group: StatsGroup): StatEntry[] {
+function collectStatsInGroup(group: SourceGroup): StatEntry[] {
   // If a module doesn't have any submodules beneath it, then just return its own size
   // Otherwise, break each module into its submodules with their own sizes
   if (!group.groups) {
@@ -27,14 +35,14 @@ function collectStatsInGroup(group: StatsGroup): StatEntry[] {
         {
           name: formatLabel(group.label),
           originalName: group.label,
-          size: group.statSize ?? 0,
-          gzipSize: null,
+          size: group.parsedSize ?? 0,
+          gzipSize: group.gzipSize ?? 0,
         },
       ],
     ];
   }
 
-  return group.groups.flatMap((subgroup: StatsGroup) => collectStatsInGroup(subgroup)) ?? [];
+  return group.groups.flatMap((subgroup: SourceGroup) => collectStatsInGroup(subgroup)) ?? [];
 }
 
 export function assetNameToSizeMap(statAssets: StatsAsset[] = []): Map<string, SizesWithName> {
@@ -58,11 +66,11 @@ export function chunkModuleNameToSizeMap(
 ): Map<string, SizesWithName> {
   return new Map(
     statsAssets.flatMap((asset) => {
-      if (!asset.stats) {
+      if (!asset.source) {
         return [];
       }
 
-      return asset.stats.flatMap((stat: StatsGroup) => collectStatsInGroup(stat));
+      return asset.source.flatMap((source: SourceGroup) => collectStatsInGroup(source));
     }),
   );
 }

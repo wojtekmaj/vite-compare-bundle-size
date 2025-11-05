@@ -26,6 +26,7 @@ function collectStatsInGroup(group: StatsGroup): StatEntry[] {
         formatId(group),
         {
           name: formatLabel(group.label),
+          originalName: group.label,
           size: group.statSize ?? 0,
           gzipSize: null,
         },
@@ -42,6 +43,7 @@ export function assetNameToSizeMap(statAssets: StatsAsset[] = []): Map<string, S
       formatId(asset),
       {
         name: formatLabel(asset.label),
+        originalName: asset.label,
         size: asset.parsedSize,
         gzipSize: asset.gzipSize,
       },

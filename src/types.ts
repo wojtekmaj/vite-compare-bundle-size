@@ -5,6 +5,7 @@ export type Sizes = {
 
 export type SizesWithName = Sizes & {
   name: string;
+  originalName: string;
 };
 
 export type AssetDiff = {

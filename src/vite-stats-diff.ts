@@ -22,7 +22,9 @@ export function viteStatsDiff(
     oldSizeTotal += oldAssetSizes.size;
     oldGzipSizeTotal += oldAssetSizes.gzipSize ?? Number.NaN;
 
-    const newAsset = newAssets.get(assetId);
+    const newAsset =
+      newAssets.get(assetId) ||
+      Array.from(newAssets.values()).find((a) => a.originalName === oldAssetSizes.originalName);
 
     if (!newAsset) {
       removed.push(getAssetDiff(oldAssetSizes.name, oldAssetSizes, { size: 0, gzipSize: 0 }));
@@ -43,7 +45,9 @@ export function viteStatsDiff(
     newSizeTotal += newAssetSizes.size;
     newGzipSizeTotal += newAssetSizes.gzipSize ?? Number.NaN;
 
-    const oldAsset = oldAssets.get(assetId);
+    const oldAsset =
+      oldAssets.get(assetId) ||
+      Array.from(oldAssets.values()).find((a) => a.originalName === newAssetSizes.originalName);
 
     if (!oldAsset) {
       added.push(getAssetDiff(newAssetSizes.name, { size: 0, gzipSize: 0 }, newAssetSizes));

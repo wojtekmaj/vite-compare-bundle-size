@@ -54,7 +54,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{github.event.pull_request.head.ref}}
 
@@ -65,7 +65,7 @@ jobs:
         run: npm run build
 
       - name: Upload stats.json
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: head-stats
           path: ./dist/stats.json
@@ -78,7 +78,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           ref: ${{ github.base_ref }}
 
@@ -89,7 +89,7 @@ jobs:
         run: npm run build
 
       - name: Upload stats.json
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: base-stats
           path: ./dist/stats.json
@@ -103,7 +103,7 @@ jobs:
 
     steps:
       - name: Download stats.json files
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
 
       - name: Compare bundle size
         uses: wojtekmaj/vite-compare-bundle-size@v1

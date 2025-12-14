@@ -18,9 +18,9 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: ./
         with:
           current-stats-json-path: ./__tests__/__mocks__/new-stats-assets.json

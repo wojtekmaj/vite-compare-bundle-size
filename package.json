@@ -33,7 +33,6 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.2",
     "@types/node": "*",
-    "@vercel/ncc": "^0.38.1",
     "husky": "^9.0.0",
     "typescript": "^5.9.2",
     "vitest": "^4.0.1"

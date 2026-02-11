@@ -3,7 +3,7 @@ import type { SizesWithName, SourceGroup, StatsAsset, StatsGroup } from './types
 type StatEntry = [label: string, SizesWithName];
 
 function formatLabel(label: string): string {
-  return label.replace(/-[a-zA-Z0-9_-]{8}\./, '-[hash].');
+  return label.replace(/-[a-zA-Z0-9_-]{8}(?=\.[^.]+$)/, '-[hash]');
 }
 
 function formatId(asset: StatsAsset | SourceGroup, stats?: StatsGroup | null): string {

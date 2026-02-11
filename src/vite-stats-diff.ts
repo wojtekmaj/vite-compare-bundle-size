@@ -3,6 +3,43 @@ import { sortDiffDescending } from './sort-diff-descending.js';
 
 import type { SizesWithName, ViteStatsDiff } from './types.js';
 
+type NewAssetEntry = {
+  id: string;
+  sizes: SizesWithName;
+  matched: boolean;
+};
+
+function findMatchingAsset(
+  newAssetEntries: NewAssetEntry[],
+  oldAssetId: string,
+  oldAssetSizes: SizesWithName,
+): NewAssetEntry | undefined {
+  const exactMatch = newAssetEntries.find((asset) => !asset.matched && asset.id === oldAssetId);
+  if (exactMatch) {
+    return exactMatch;
+  }
+
+  const originalNameMatch = newAssetEntries.find(
+    (asset) => !asset.matched && asset.sizes.originalName === oldAssetSizes.originalName,
+  );
+  if (originalNameMatch) {
+    return originalNameMatch;
+  }
+
+  const sameNameAndSizeMatch = newAssetEntries.find(
+    (asset) =>
+      !asset.matched &&
+      asset.sizes.name === oldAssetSizes.name &&
+      asset.sizes.size === oldAssetSizes.size &&
+      asset.sizes.gzipSize === oldAssetSizes.gzipSize,
+  );
+  if (sameNameAndSizeMatch) {
+    return sameNameAndSizeMatch;
+  }
+
+  return newAssetEntries.find((asset) => !asset.matched && asset.sizes.name === oldAssetSizes.name);
+}
+
 export function viteStatsDiff(
   oldAssets: Map<string, SizesWithName>,
   newAssets: Map<string, SizesWithName>,
@@ -18,18 +55,24 @@ export function viteStatsDiff(
   let newGzipSizeTotal = 0;
   let oldGzipSizeTotal = 0;
 
+  const newAssetEntries = Array.from(newAssets.entries()).map(([id, sizes]) => ({
+    id,
+    sizes,
+    matched: false,
+  }));
+
   for (const [assetId, oldAssetSizes] of oldAssets) {
     oldSizeTotal += oldAssetSizes.size;
     oldGzipSizeTotal += oldAssetSizes.gzipSize ?? Number.NaN;
 
-    const newAsset =
-      newAssets.get(assetId) ||
-      Array.from(newAssets.values()).find((a) => a.originalName === oldAssetSizes.originalName);
+    const matchingNewAsset = findMatchingAsset(newAssetEntries, assetId, oldAssetSizes);
 
-    if (!newAsset) {
+    if (!matchingNewAsset) {
       removed.push(getAssetDiff(oldAssetSizes.name, oldAssetSizes, { size: 0, gzipSize: 0 }));
     } else {
-      const diff = getAssetDiff(oldAssetSizes.name, oldAssetSizes, newAsset);
+      matchingNewAsset.matched = true;
+
+      const diff = getAssetDiff(oldAssetSizes.name, oldAssetSizes, matchingNewAsset.sizes);
 
       if (diff.diffPercentage > 0) {
         bigger.push(diff);
@@ -41,16 +84,12 @@ export function viteStatsDiff(
     }
   }
 
-  for (const [assetId, newAssetSizes] of newAssets) {
-    newSizeTotal += newAssetSizes.size;
-    newGzipSizeTotal += newAssetSizes.gzipSize ?? Number.NaN;
+  for (const newAsset of newAssetEntries) {
+    newSizeTotal += newAsset.sizes.size;
+    newGzipSizeTotal += newAsset.sizes.gzipSize ?? Number.NaN;
 
-    const oldAsset =
-      oldAssets.get(assetId) ||
-      Array.from(oldAssets.values()).find((a) => a.originalName === newAssetSizes.originalName);
-
-    if (!oldAsset) {
-      added.push(getAssetDiff(newAssetSizes.name, { size: 0, gzipSize: 0 }, newAssetSizes));
+    if (!newAsset.matched) {
+      added.push(getAssetDiff(newAsset.sizes.name, { size: 0, gzipSize: 0 }, newAsset.sizes));
     }
   }
 

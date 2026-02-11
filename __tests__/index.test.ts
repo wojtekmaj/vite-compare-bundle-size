@@ -8,39 +8,35 @@ import {
   printChunkModulesTable,
   printTotalAssetTable,
 } from '../src/print-markdown.js';
-import {
-  type DescribeAssetsOptions,
-  type DescribeAssetsSection,
-  describeAssetsSections,
-  type ViteStatsDiff,
-} from '../src/types.js';
+import { describeAssetsSections } from '../src/types.js';
+import afterStats from './fixtures/basic/after.json' with { type: 'json' };
+import beforeStats from './fixtures/basic/before.json' with { type: 'json' };
 
-import newStatsAssets from './__mocks__/new-stats-assets.json' with { type: 'json' };
-import oldStatsAssets from './__mocks__/old-stats-assets.json' with { type: 'json' };
+import type { DescribeAssetsOptions, DescribeAssetsSection, ViteStatsDiff } from '../src/types.js';
 
 test('Shows stats when files are removed', async () => {
-  const statsDiff = getStatsDiff(oldStatsAssets, newStatsAssets);
+  const statsDiff = getStatsDiff(beforeStats, afterStats);
 
   expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
   expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
 });
 
 test('Shows stats when files are added', async () => {
-  const statsDiff = getStatsDiff(oldStatsAssets, newStatsAssets);
+  const statsDiff = getStatsDiff(beforeStats, afterStats);
 
   expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
   expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
 });
 
 test('Shows stats when files are unchanged', async () => {
-  const statsDiff = getStatsDiff(oldStatsAssets, oldStatsAssets);
+  const statsDiff = getStatsDiff(beforeStats, beforeStats);
 
   expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
   expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
 });
 
 test('does not display module information when it does not exist', async () => {
-  const statsDiff = getChunkModuleDiff(oldStatsAssets, oldStatsAssets);
+  const statsDiff = getChunkModuleDiff(beforeStats, beforeStats);
 
   expect(printChunkModulesTable(statsDiff)).toMatchSnapshot();
 });
@@ -72,7 +68,7 @@ describe('printAssetTablesByGroup describes asset sections as requested', () => 
   let statsDiff: ViteStatsDiff;
 
   beforeAll(async () => {
-    statsDiff = getStatsDiff(oldStatsAssets, newStatsAssets);
+    statsDiff = getStatsDiff(beforeStats, afterStats);
   });
 
   test.each(cases)('printAssetTablesByGroup: %j', (options: DescribeAssetsOptions) => {

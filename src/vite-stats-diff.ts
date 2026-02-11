@@ -93,6 +93,11 @@ export function viteStatsDiff(
     }
   }
 
+  // When there are no size-based asset changes, gzip-only drift is usually hash noise.
+  if (added.length === 0 && removed.length === 0 && bigger.length === 0 && smaller.length === 0) {
+    newGzipSizeTotal = oldGzipSizeTotal;
+  }
+
   const oldFilesCount = oldAssets.size;
   const newFilesCount = newAssets.size;
 

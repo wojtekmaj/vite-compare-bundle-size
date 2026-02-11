@@ -72,7 +72,7 @@ Asset | File Size | % Changed
 assets/index-[hash].js | 7.78 kB<br />5.14 kB | 0%"
 `;
 
-exports[`Shows stats when files are unchanged (2) 1`] = `
+exports[`Shows stats when files are unchanged (technically unchanged fixture) 1`] = `
 "**Total**
 
 Files count | Total bundle size | % Changed
@@ -80,7 +80,7 @@ Files count | Total bundle size | % Changed
 4 | 295.56 kB<br />141.56 kB | 0%"
 `;
 
-exports[`Shows stats when files are unchanged (2) 2`] = `
+exports[`Shows stats when files are unchanged (technically unchanged fixture) 2`] = `
 "**Added**
 
 No assets were added

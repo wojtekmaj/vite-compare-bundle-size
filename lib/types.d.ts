@@ -4,6 +4,7 @@ export type Sizes = {
 };
 export type SizesWithName = Sizes & {
     name: string;
+    originalName: string;
 };
 export type AssetDiff = {
     name: string;
@@ -25,8 +26,14 @@ export type DescribeAssetsSection = (typeof describeAssetsSections)[number];
 export type DescribeAssetsOptions = {
     [S in DescribeAssetsSection]: boolean;
 };
+export type SourceGroup = {
+    gzipSize: number;
+    parsedSize: number;
+    brotliSize?: number;
+    label: string;
+    groups?: SourceGroup[];
+};
 export type StatsGroup = {
-    statSize: number;
     label: string;
     groups?: StatsGroup[];
 };
@@ -34,8 +41,9 @@ export type StatsAsset = {
     filename: string;
     label: string;
     parsedSize: number;
-    statSize: number;
     gzipSize: number;
+    brotliSize?: number;
+    source?: SourceGroup[];
     stats?: StatsGroup[];
 };
 export declare const isDescribeAssetsSection: (option: string) => option is DescribeAssetsSection;

@@ -50,6 +50,13 @@ jobs:
 
       - uses: ./
         with:
+          current-stats-json-path: ./__tests__/fixtures/technically-unchanged/before.json
+          base-stats-json-path: ./__tests__/fixtures/technically-unchanged/after.json
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          title: No changes (2)
+
+      - uses: ./
+        with:
           current-stats-json-path: ./__tests__/fixtures/basic/after.json
           base-stats-json-path: ./__tests__/fixtures/basic/before.json
           github-token: ${{ secrets.GITHUB_TOKEN }}

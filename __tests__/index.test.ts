@@ -12,6 +12,10 @@ import {
 import { describeAssetsSections } from '../src/types.js';
 import afterStats from './fixtures/basic/after.json' with { type: 'json' };
 import beforeStats from './fixtures/basic/before.json' with { type: 'json' };
+import afterUnchangedStats from './fixtures/technically-unchanged/after.json' with { type: 'json' };
+import beforeUnchangedStats from './fixtures/technically-unchanged/before.json' with {
+  type: 'json',
+};
 
 import type { DescribeAssetsOptions, DescribeAssetsSection, ViteStatsDiff } from '../src/types.js';
 
@@ -31,6 +35,13 @@ test('Shows stats when files are added', async () => {
 
 test('Shows stats when files are unchanged', async () => {
   const statsDiff = getStatsDiff(beforeStats, beforeStats);
+
+  expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
+  expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
+});
+
+test('Shows stats when files are unchanged (2)', async () => {
+  const statsDiff = getStatsDiff(beforeUnchangedStats, afterUnchangedStats);
 
   expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
   expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
@@ -196,4 +207,20 @@ test('normalizes trailing 8-character Vite asset hashes', () => {
   expect(names).toContain('assets/index-[hash].js');
   expect(names).toContain('assets/extra_content-[hash].js');
   expect(names).toContain('assets/arrow-right.js');
+});
+
+describe('technically unchanged fixtures', () => {
+  test('do not report added or removed assets', () => {
+    const statsDiff = getStatsDiff(beforeUnchangedStats, afterUnchangedStats);
+
+    expect(statsDiff.added).toHaveLength(0);
+    expect(statsDiff.removed).toHaveLength(0);
+  });
+
+  test('do not report total bundle size changes', () => {
+    const statsDiff = getStatsDiff(beforeUnchangedStats, afterUnchangedStats);
+
+    expect(statsDiff.total.diff).toBe(0);
+    expect(statsDiff.total.old.gzipSize).toBe(statsDiff.total.new.gzipSize);
+  });
 });

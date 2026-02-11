@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "assets/index-sU0QZ2Kc.js",
+    "label": "assets/index-sU0QZ2Kc.js",
+    "parsedSize": 4117,
+    "gzipSize": 2802,
+    "source": [
+      {
+        "label": "virtual-46da4cf348/module-a.ts",
+        "parsedSize": 4117,
+        "gzipSize": 2802
+      }
+    ]
+  },
+  {
+    "filename": "assets/index-Du5fOXit.js",
+    "label": "assets/index-Du5fOXit.js",
+    "parsedSize": 3529,
+    "gzipSize": 1985,
+    "source": [
+      {
+        "label": "virtual-46da4cf348/module-b.ts",
+        "parsedSize": 3529,
+        "gzipSize": 1985
+      }
+    ]
+  },
+  {
+    "filename": "assets/pie_chart-CjtoGuuk.js",
+    "label": "assets/pie_chart-CjtoGuuk.js",
+    "parsedSize": 286952,
+    "gzipSize": 135289,
+    "source": [
+      {
+        "label": "virtual-46da4cf348/module-c.ts",
+        "parsedSize": 286952,
+        "gzipSize": 135289
+      }
+    ]
+  },
+  {
+    "filename": "assets/index-rg2FbQ5i.js",
+    "label": "assets/index-rg2FbQ5i.js",
+    "parsedSize": 8059,
+    "gzipSize": 4878,
+    "source": [
+      {
+        "label": "virtual-46da4cf348/module-d.ts",
+        "parsedSize": 8059,
+        "gzipSize": 4878
+      }
+    ]
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "filename": "assets/index-Bwgjya7t.js",
+    "label": "assets/index-Bwgjya7t.js",
+    "parsedSize": 4117,
+    "gzipSize": 2802,
+    "source": [
+      {
+        "label": "virtual-78ce18e273/module-a.ts",
+        "parsedSize": 4117,
+        "gzipSize": 2802
+      }
+    ]
+  },
+  {
+    "filename": "assets/index-DqCJqD-p.js",
+    "label": "assets/index-DqCJqD-p.js",
+    "parsedSize": 3529,
+    "gzipSize": 1985,
+    "source": [
+      {
+        "label": "virtual-78ce18e273/module-b.ts",
+        "parsedSize": 3529,
+        "gzipSize": 1985
+      }
+    ]
+  },
+  {
+    "filename": "assets/pie_chart-D1lMuZN4.js",
+    "label": "assets/pie_chart-D1lMuZN4.js",
+    "parsedSize": 286952,
+    "gzipSize": 135289,
+    "source": [
+      {
+        "label": "virtual-78ce18e273/module-c.ts",
+        "parsedSize": 286952,
+        "gzipSize": 135289
+      }
+    ]
+  },
+  {
+    "filename": "assets/index-CV7P8aZ7.js",
+    "label": "assets/index-CV7P8aZ7.js",
+    "parsedSize": 8059,
+    "gzipSize": 4878,
+    "source": [
+      {
+        "label": "virtual-78ce18e273/module-d.ts",
+        "parsedSize": 8059,
+        "gzipSize": 4878
+      }
+    ]
+  }
+]

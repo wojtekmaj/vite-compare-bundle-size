@@ -1,13 +1,5 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 
-import afterStats from '../fixtures/basic/after.json' with { type: 'json' };
-import beforeStats from '../fixtures/basic/before.json' with { type: 'json' };
-import afterUnchangedStats from '../fixtures/technically-unchanged/after.json' with {
-  type: 'json',
-};
-import beforeUnchangedStats from '../fixtures/technically-unchanged/before.json' with {
-  type: 'json',
-};
 import { getChunkModuleDiff } from '../src/get-chunk-module-diff.js';
 import { getStatsDiff } from '../src/get-stats-diff.js';
 import {
@@ -16,6 +8,12 @@ import {
   printTotalAssetTable,
 } from '../src/print-markdown.js';
 import { describeAssetsSections } from '../src/types.js';
+import afterStats from './fixtures/basic/after.json' with { type: 'json' };
+import beforeStats from './fixtures/basic/before.json' with { type: 'json' };
+import afterUnchangedStats from './fixtures/technically-unchanged/after.json' with { type: 'json' };
+import beforeUnchangedStats from './fixtures/technically-unchanged/before.json' with {
+  type: 'json',
+};
 
 import type { DescribeAssetsOptions, ViteStatsDiff } from '../src/types.js';
 

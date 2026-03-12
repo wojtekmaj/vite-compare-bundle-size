@@ -1,12 +1,10 @@
 import { describe, expect, test } from 'vitest';
 
-import afterUnchangedStats from '../fixtures/technically-unchanged/after.json' with {
-  type: 'json',
-};
-import beforeUnchangedStats from '../fixtures/technically-unchanged/before.json' with {
-  type: 'json',
-};
 import { getStatsDiff } from '../src/get-stats-diff.js';
+import afterUnchangedStats from './fixtures/technically-unchanged/after.json' with { type: 'json' };
+import beforeUnchangedStats from './fixtures/technically-unchanged/before.json' with {
+  type: 'json',
+};
 
 describe('technically unchanged fixtures', () => {
   test('do not report added or removed assets', () => {

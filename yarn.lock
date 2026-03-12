@@ -157,10 +157,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discoveryjs/json-ext@npm:^0.6.0":
-  version: 0.6.1
-  resolution: "@discoveryjs/json-ext@npm:0.6.1"
-  checksum: 10c0/116838b9685f26ce88335703f0f0cb84a242f9db93a6b408676c314a3bfd916ef405d84c3ff427e882dc4775b586e3a8a9d88fecc07cc93cbd33f6d560db29bf
+"@discoveryjs/json-ext@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@discoveryjs/json-ext@npm:1.0.0"
+  checksum: 10c0/e68c79f3af16409b27d883072fc02fa744412f777c5508420d7067f83af23dbfdee7d2b11f5b7cc9580f88e54431d86e967f1cb7d27f3f089f2fd973f54e2060
   languageName: node
   linkType: hard
 
@@ -760,7 +760,7 @@ __metadata:
     "@actions/core": "npm:^3.0.0"
     "@actions/github": "npm:^9.0.0"
     "@biomejs/biome": "npm:2.2.2"
-    "@discoveryjs/json-ext": "npm:^0.6.0"
+    "@discoveryjs/json-ext": "npm:^1.0.0"
     "@types/node": "npm:*"
     "@vercel/ncc": "npm:^0.38.4"
     husky: "npm:^9.0.0"

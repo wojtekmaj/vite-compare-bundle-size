@@ -58,7 +58,7 @@ function toFileSizeDiffCell(asset: AssetDiff): string {
   if (asset.diff === 0) {
     lines.push(formatFileSizeIEC(asset.new.size));
     if (asset.new.gzipSize) {
-      lines.push(formatFileSizeIEC(asset.new.gzipSize));
+      lines.push(`${formatFileSizeIEC(asset.new.gzipSize)} (gzip)`);
     }
   } else {
     lines.push(toFileSizeDiff(asset.old.size, asset.new.size, asset.diff));

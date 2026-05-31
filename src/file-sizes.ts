@@ -24,7 +24,9 @@ export function formatFileSizeIEC(bytes: number | null, precision = 2): string {
     return 'N/A';
   }
 
-  if (bytes === 0) return `0 ${denominations[0]}`;
+  if (bytes === 0) {
+    return `0 ${denominations[0]}`;
+  }
 
   const absBytes = Math.abs(bytes);
 

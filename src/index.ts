@@ -5,11 +5,8 @@ import { getChunkModuleDiff } from './get-chunk-module-diff.js';
 import { getStatsDiff } from './get-stats-diff.js';
 import { parseStatsFileToJson } from './parse-stats-file-to-json.js';
 import { getCommentBody, getIdentifierComment } from './to-comment-body.js';
-import {
-  type DescribeAssetsOptions,
-  type DescribeAssetsSection,
-  isDescribeAssetsSection,
-} from './types.js';
+import { isDescribeAssetsSection } from './types.js';
+import type { DescribeAssetsOptions, DescribeAssetsSection } from './types.js';
 
 export function getDescribeAssetsOptions(rawOptionString: string): DescribeAssetsOptions {
   let optionString = rawOptionString.trim().toLowerCase();
@@ -120,7 +117,9 @@ async function run(): Promise<void> {
 
     await Promise.all(promises);
   } catch (error) {
-    if (error instanceof Error) core.setFailed(error.message);
+    if (error instanceof Error) {
+      core.setFailed(error.message);
+    }
   }
 }
 

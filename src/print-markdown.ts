@@ -37,7 +37,10 @@ const TOTAL_HEADERS = makeHeader(['Files count', 'Total bundle size', '% Changed
 const TABLE_HEADERS = makeHeader(['Asset', 'File Size', '% Changed']);
 
 function signFor(num: number): '' | '+' | '-' {
-  if (num === 0) return '';
+  if (num === 0) {
+    return '';
+  }
+
   return num > 0 ? '+' : '-';
 }
 
@@ -153,7 +156,9 @@ function printChunkModuleRow(chunkModule: AssetDiff): string {
 export function printChunkModulesTable(
   statsDiff: Omit<ViteStatsDiff, 'total' | 'unchanged'> | null,
 ): string {
-  if (!statsDiff) return '';
+  if (!statsDiff) {
+    return '';
+  }
 
   const changedModules = [
     ...statsDiff.added,

@@ -13,13 +13,13 @@ exports[`Shows stats when files are added 2`] = `
 
 Asset | File Size | % Changed
 ----- | --------- | ---------
-assets/logo_field-[hash].js | 0 B → 1.47 kB (+1.47 kB)<br />0 B → 962 B (gzip) | -
+assets/logo\\_field-[hash].js | 0 B → 1.47 kB (+1.47 kB)<br />0 B → 962 B (gzip) | -
 
 **Removed**
 
 Asset | File Size | % Changed
 ----- | --------- | ---------
-assets/login_as_button-[hash].js | 502 B → 0 B (-502 B)<br />359 B → 0 B (gzip) | -100%
+assets/login\\_as\\_button-[hash].js | 502 B → 0 B (-502 B)<br />359 B → 0 B (gzip) | -100%
 
 **Bigger**
 
@@ -49,13 +49,13 @@ exports[`Shows stats when files are removed 2`] = `
 
 Asset | File Size | % Changed
 ----- | --------- | ---------
-assets/logo_field-[hash].js | 0 B → 1.47 kB (+1.47 kB)<br />0 B → 962 B (gzip) | -
+assets/logo\\_field-[hash].js | 0 B → 1.47 kB (+1.47 kB)<br />0 B → 962 B (gzip) | -
 
 **Removed**
 
 Asset | File Size | % Changed
 ----- | --------- | ---------
-assets/login_as_button-[hash].js | 502 B → 0 B (-502 B)<br />359 B → 0 B (gzip) | -100%
+assets/login\\_as\\_button-[hash].js | 502 B → 0 B (-502 B)<br />359 B → 0 B (gzip) | -100%
 
 **Bigger**
 
@@ -103,7 +103,7 @@ Asset | File Size | % Changed
 ----- | --------- | ---------
 assets/index-[hash].js | 4.02 kB<br />2.74 kB (gzip) | 0%
 assets/index-[hash].js | 3.45 kB<br />1.94 kB (gzip) | 0%
-assets/pie_chart-[hash].js | 280.23 kB<br />132.12 kB (gzip) | 0%
+assets/pie\\_chart-[hash].js | 280.23 kB<br />132.12 kB (gzip) | 0%
 assets/index-[hash].js | 7.87 kB<br />4.76 kB (gzip) | 0%"
 `;
 
@@ -137,7 +137,7 @@ No assets were smaller
 Asset | File Size | % Changed
 ----- | --------- | ---------
 assets/index-[hash].js | 7.78 kB<br />5.14 kB (gzip) | 0%
-assets/login_as_button-[hash].js | 502 B<br />359 B (gzip) | 0%"
+assets/login\\_as\\_button-[hash].js | 502 B<br />359 B (gzip) | 0%"
 `;
 
 exports[`does not display module information when it does not exist 1`] = `

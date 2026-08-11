@@ -6,6 +6,7 @@ import { getStatsDiff } from './get-stats-diff.js';
 import { parseStatsFileToJson } from './parse-stats-file-to-json.js';
 import { getCommentBody, getIdentifierComment } from './to-comment-body.js';
 import { isDescribeAssetsSection } from './types.js';
+
 import type { DescribeAssetsOptions, DescribeAssetsSection } from './types.js';
 
 export function getDescribeAssetsOptions(rawOptionString: string): DescribeAssetsOptions {

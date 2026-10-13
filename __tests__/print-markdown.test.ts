@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, test } from 'vitest';
 
+import { getAssetDiff } from '../src/get-asset-diff.js';
 import { getChunkModuleDiff } from '../src/get-chunk-module-diff.js';
 import { getStatsDiff } from '../src/get-stats-diff.js';
 import {
@@ -43,6 +44,24 @@ test('Shows stats when files are unchanged (technically unchanged fixture)', asy
 
   expect(printTotalAssetTable(statsDiff)).toMatchSnapshot();
   expect(printAssetTablesByGroup(statsDiff)).toMatchSnapshot();
+});
+
+test('escapes Markdown characters in asset names', () => {
+  const asset = getAssetDiff(
+    '_app/asset_name*`$|.js',
+    { size: 0, gzipSize: 0 },
+    { size: 1, gzipSize: 1 },
+  );
+
+  const output = printAssetTablesByGroup({
+    added: [asset],
+    removed: [],
+    bigger: [],
+    smaller: [],
+    unchanged: [],
+  });
+
+  expect(output).toContain('\\_app/asset\\_name\\*\\`\\$\\|.js');
 });
 
 test('does not display module information when it does not exist', async () => {

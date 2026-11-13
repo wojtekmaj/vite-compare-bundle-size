@@ -74,9 +74,13 @@ function toFileSizeDiffCell(asset: AssetDiff): string {
 }
 
 function printAssetTableRow(asset: AssetDiff): string {
-  return [asset.name, toFileSizeDiffCell(asset), conditionalPercentage(asset.diffPercentage)].join(
-    ' | ',
-  );
+  const escapedAssetName = asset.name.replaceAll(/([_*`$|])/g, '\\$1');
+
+  return [
+    escapedAssetName,
+    toFileSizeDiffCell(asset),
+    conditionalPercentage(asset.diffPercentage),
+  ].join(' | ');
 }
 
 export function printAssetTablesByGroup(

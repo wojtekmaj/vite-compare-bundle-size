@@ -37311,7 +37311,7 @@ function toFileSizeDiffCell(asset) {
     if (asset.diff === 0) {
         lines.push(formatFileSizeIEC(asset.new.size));
         if (asset.new.gzipSize) {
-            lines.push(formatFileSizeIEC(asset.new.gzipSize));
+            lines.push(`${formatFileSizeIEC(asset.new.gzipSize)} (gzip)`);
         }
     }
     else {

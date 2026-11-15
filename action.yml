@@ -1,6 +1,6 @@
-name: 'Vite Compare Bundle Size'
+name: "Vite Compare Bundle Size"
 
-description: 'Compare the bundle size between the base branch and the current branch'
+description: "Compare the bundle size between the base branch and the current branch"
 
 branding:
   icon: bar-chart-2
@@ -8,16 +8,16 @@ branding:
 
 inputs:
   current-stats-json-path:
-    description: 'The path to the current stats.json file'
+    description: "The path to the current stats.json file"
     required: true
   base-stats-json-path:
-    description: 'The path to the base stats.json file'
+    description: "The path to the base stats.json file"
     required: true
   github-token:
-    description: 'The Github token'
+    description: "The Github token"
     required: true
   title:
-    description: 'An optional addition to the title, which also helps key comments, useful if running more than 1 copy of this action'
+    description: "An optional addition to the title, which also helps key comments, useful if running more than 1 copy of this action"
     required: false
   describe-assets:
     description: |
@@ -32,8 +32,8 @@ inputs:
         - unchanged
       If not provided, "all" is used (equivalent to "added removed bigger smaller unchanged")
     required: false
-    default: 'all'
+    default: "all"
 
 runs:
-  using: 'node20'
-  main: 'dist/index.js'
+  using: "node20"
+  main: "dist/index.js"
